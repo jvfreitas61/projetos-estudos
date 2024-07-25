@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calcular IMC</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <section class="container">
+      <div class="titulo-imc">
+        <h1>Tabela IMC</h1>
+      </div>
+      <div class="legendas">
+        <div class="legenda-imc">
+          <h3>IMC</h3>
+          <ul>
+            <li>Menos do que 18,5</li>
+            <li>Entre 18,5 e 24,9</li>
+            <li>Entre 25 e 29,9</li>
+            <li>Entre 30 e 34,9</li>
+            <li>Entre 35 e 39,9</li>
+            <li>Mais do que 40</li>
+          </ul>
+        </div>
+        <div class="legenda-resultado">
+          <h3>Resultado</h3>
+          <ul>
+            <li>Abaixo do peso</li>
+            <li>Peso normal</li>
+            <li>Sobrepeso</li>
+            <li>Obesidade grau 1</li>
+            <li>Obesidade grau 2</li>
+            <li>Obesidade grau 3</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h1>Calcule seu IMC</h1>
+        <p>Sexo:</p>
+        <form style="display: flex;">          
+          <input type="radio" name="radsex" id="mas" style="height: 25px; width: 100px;" checked>
+          <label for="mas" style="margin-left: 10px;">Masculino</label>
+          <input type="radio" name="radsex" id="fem" style="height: 25px; width: 100px;">
+          <label for="fem"style="margin-left: 10px;">Feminino</label>
+        </form>
+        <form>
+          <label for="txtpeso">Peso (Kg):</label>
+          <input type="number" name="txtpeso" id="txtpeso" required min="0">
+          <label for="txtaltura">Altura (m):</label>
+          <input type="number" name="txtaltura" id="txtaltura" required min="0">
+        </form>
+        <input type="button" value="Calcular" class="button" onclick="calcular()">
+      </div>
+    <div id="caixa-resultado" class="resultado">
+      <div class="resultado-titulo">
+        <div class="resultado-titulo-h4">
+          <h4>seu IMC é:</h4>
+        </div>
+        <div class="resultado-titulo-valor">
+          <h4 id="res">Resultado</h4>
+        </div>
+      </div>
+      <div class="resultado-texto">
+        <div class="imagem">
+          <img id="foto" src="assets/img/imc_mas_01.png.webp" alt="imagem">
+        </div>
+        <div class="texto" id="tex-res">
+            Procure um médico. Algumas pessoas têm um baixo peso por características do seu organismo e tudo bem. Outras podem estar enfrentando problemas, como a desnutrição. É preciso saber qual é o caso.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
